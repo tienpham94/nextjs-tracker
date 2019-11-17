@@ -1,6 +1,8 @@
 import HabitButton from "./HabitButton";
 
-const Habit = ({ habit }) => {
+const colors = ["#718096", "#F56565", "#F6E05E", "#68D391", "#63B3ED"];
+
+const Habit = ({ habit, index }) => {
   const dates = getLast5Days();
   const color = "#718096";
   return (
@@ -13,7 +15,7 @@ const Habit = ({ habit }) => {
       </div>
       <style jsx>{`
         h3 {
-          border-bottom: solid 4px ${color};
+          border-bottom: solid 4px ${colors[index]};
         }
       `}</style>
     </article>

@@ -1,10 +1,12 @@
-import Habit from './Habit'
+import Habit from "./Habit";
 
-const HabitList = () => (
+const HabitList = ({ habits }) => (
   <section>
     <h2>My Habits</h2>
-    <Habit />
+    {habits.map(h => (
+      <Habit key={h} habit={h} />
+    ))}
   </section>
-)
+);
 
-export default HabitList
+export default HabitList;

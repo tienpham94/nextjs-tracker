@@ -2,6 +2,7 @@ import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
 
 import Layout from "../components/Layout";
+import HabitList from "../components/HabitList";
 import { withApollo } from "../lib/apollo";
 
 const HELLO_QUERY = gql`
@@ -19,6 +20,7 @@ const Home = () => {
     <Layout>
       <div className="hero">
         <h1 className="title">Level Up Your Life</h1>
+        <HabitList />
       </div>
 
       <style jsx>{`

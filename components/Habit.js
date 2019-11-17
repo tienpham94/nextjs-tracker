@@ -2,15 +2,20 @@ import HabitButton from "./HabitButton";
 
 const Habit = ({ habit }) => {
   const dates = getLast5Days();
-  console.log(dates);
+  const color = "#718096";
   return (
     <article>
       <h3>{habit}</h3>
       <div>
         {dates.map(date => (
-          <HabitButton key={date.getMilliseconds()} date={date} />
+          <HabitButton key={date.getTime()} date={date} />
         ))}
       </div>
+      <style jsx>{`
+        h3 {
+          border-bottom: solid 4px ${color};
+        }
+      `}</style>
     </article>
   );
 };

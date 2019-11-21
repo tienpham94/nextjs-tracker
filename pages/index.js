@@ -15,7 +15,6 @@ const HELLO_QUERY = gql`
 
 const Home = () => {
   const { data, loading, error } = useQuery(HELLO_QUERY);
-  const [habits, setHabits] = useState(["Do dishes"]);
 
   if (loading) return <div />;
 
@@ -25,7 +24,7 @@ const Home = () => {
         <h1 className="title">Level Up Your Life</h1>
         <div className="list">
           <HabitForm setHabits={setHabits} />
-          <HabitList habits={habits} />
+          <HabitList />
         </div>
       </div>
 
